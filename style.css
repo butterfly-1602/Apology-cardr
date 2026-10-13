@@ -1,0 +1,658 @@
+/* =====================================
+   🩵🎀 SKY BLUE & BABY PINK LOVE THEME
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sky-blue: #bdeaff;
+    --light-blue: #e4f7ff;
+    --baby-pink: #ffb6d0;
+    --light-pink: #ffe4ef;
+    --hot-pink: #f278a8;
+    --dark-pink: #cf5488;
+    --white: #ffffff;
+    --cream: #fffafd;
+    --text: #69516c;
+    --purple: #a99be8;
+}
+
+/* ☁️ Background */
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+
+    font-family: "Trebuchet MS", sans-serif;
+    color: var(--text);
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 10% 15%, #ffffff 0 3%, transparent 3.5%),
+        radial-gradient(circle at 90% 25%, #ffffffaa 0 4%, transparent 4.5%),
+        radial-gradient(circle at 80% 85%, #ffd9e8 0 5%, transparent 5.5%),
+        linear-gradient(
+            145deg,
+            #dff6ff,
+            #bdeaff,
+            #ffe4ef,
+            #e7f6ff
+        );
+
+    background-attachment: fixed;
+}
+
+/* 🎀 Website Title */
+
+.site-header {
+    position: relative;
+    z-index: 2;
+
+    margin: 25px auto 35px;
+
+    color: #549ec7;
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-shadow: 2px 3px 0 #ffffff;
+}
+
+.site-header::before {
+    content: "♡ ";
+    color: var(--hot-pink);
+}
+
+.site-header::after {
+    content: " ♡";
+    color: var(--hot-pink);
+}
+
+.site-header span {
+    color: var(--hot-pink);
+    font-style: italic;
+}
+
+/* 💌 Main Container */
+
+main {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+
+    perspective: 1200px;
+}
+
+/* 🌷 Multiple Scenes */
+
+.scene {
+    display: none;
+    min-height: 480px;
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: sceneAppear 0.8s ease both;
+}
+
+/* 💗 Cute Cards */
+
+.paper,
+.wish-sky {
+    position: relative;
+
+    width: 100%;
+    padding: 42px 30px;
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 35px #6ab9df30,
+        0 5px 15px #f278a830;
+}
+
+/* ☁️ White and Pink Paper */
+
+.paper {
+    background:
+        radial-gradient(
+            circle,
+            #ffc7dc 1.2px,
+            transparent 1.8px
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff5fa,
+            #f1fbff
+        );
+
+    background-size: 22px 22px, auto;
+
+    border: 3px solid #ffffff;
+    outline: 2px dashed #ffb6d0;
+    outline-offset: -10px;
+}
+
+/* Cute Decorative Hearts */
+
+.paper::before {
+    content: "♡  ✧";
+
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    color: #f278a8;
+    font-size: 25px;
+
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.paper::after {
+    content: "✧  ♡";
+
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+
+    color: #70bce5;
+    font-size: 22px;
+
+    animation: gentleFloat 3s ease-in-out infinite reverse;
+}
+
+/* 🌈 Sky of Wishes */
+
+.wish-sky {
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #ffffffaa,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            #ffcee3,
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #83d2f5,
+            #b3dfff,
+            #f4b9d5,
+            #ffcfe2
+        );
+
+    border: 3px solid #ffffffaa;
+
+    box-shadow:
+        0 0 35px #8bd5f755,
+        0 15px 35px #f278a830;
+}
+
+.wish-sky h1,
+.wish-sky .chapter {
+    color: white;
+    text-shadow: 1px 2px 5px #6c7caa55;
+}
+
+/* 🌸 Small Chapter Heading */
+
+.chapter {
+    margin-bottom: 14px;
+
+    color: #db6597;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* 🎀 Main Headings */
+
+h1 {
+    margin: 12px 0 20px;
+
+    color: #659fc7;
+
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 6vw, 46px);
+    font-weight: normal;
+}
+
+h1 em {
+    color: #f278a8;
+    font-style: italic;
+}
+
+/* 🩷 Cute Icons */
+
+.big-icon {
+    margin: 20px 0;
+
+    font-size: 62px;
+
+    filter: drop-shadow(0 7px 8px #f278a840);
+
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+/* 💌 Paragraphs */
+
+.description,
+.message {
+    max-width: 520px;
+    margin: 18px auto 26px;
+
+    color: #796a88;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* 🎀 Buttons */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.primary,
+.gold {
+    padding: 14px 27px;
+
+    border: 2px solid #ffffffaa;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+/* Baby Pink Button */
+
+.primary {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ffb6d0,
+        #f278a8,
+        #e86c9f
+    );
+
+    box-shadow:
+        0 6px 18px #f278a840;
+}
+
+/* Sky Blue Button */
+
+.gold {
+    color: #467eaa;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #d7f3ff,
+        #b6e6ff
+    );
+
+    box-shadow:
+        0 6px 18px #6ab9df40;
+}
+
+/* Button Hover */
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 24px #8bbde955;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:focus-visible {
+    outline: 3px solid #679fcb;
+    outline-offset: 4px;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* 💕 Hidden Messages */
+
+.hidden {
+    display: none !important;
+}
+
+/* Letter Reveals */
+
+.letter {
+    margin-top: 28px;
+    padding: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #fff1f7,
+        #ffffff,
+        #eaf8ff
+    );
+
+    border: 2px dashed #f3a1c0;
+    border-radius: 22px;
+
+    box-shadow:
+        inset 0 0 20px #ffcce044,
+        0 8px 20px #8bbde922;
+
+    animation: letterReveal 0.8s ease both;
+}
+
+.letter h2,
+.final-paper h2 {
+    margin-bottom: 15px;
+
+    color: #e86c9f;
+
+    font-family: Georgia, serif;
+}
+
+/* 🔐 Heart Lock */
+
+.lock {
+    width: 105px;
+    height: 105px;
+    margin: 18px auto;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #ffe0ec,
+        #bdeaff
+    );
+
+    font-size: 43px;
+
+    box-shadow:
+        0 0 0 5px #ffb6d055,
+        0 0 30px #f278a855;
+
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+/* 💗 Final Page */
+
+.final-paper {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #fff0f7,
+        #e5f7ff,
+        #ffe5ef
+    );
+
+    border: 3px solid white;
+}
+
+.final-paper h1 em {
+    color: #ed79a8;
+}
+
+.final-paper h2 {
+    color: #649fc9;
+}
+
+.signature {
+    margin: 25px 0;
+
+    color: #e86c9f;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* ❤️ Beating Heart */
+
+.beating-heart {
+    animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+/* ☁️ Footer */
+
+footer {
+    position: relative;
+    z-index: 1;
+
+    margin: 30px 0 10px;
+
+    color: #659fc7;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ✨ Background Stars */
+
+.stars,
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.stars {
+    z-index: 0;
+
+    background-image:
+        radial-gradient(
+            2px 2px at 10% 20%,
+            #ffffff 80%,
+            transparent
+        ),
+        radial-gradient(
+            2px 2px at 75% 15%,
+            #f278a8 80%,
+            transparent
+        ),
+        radial-gradient(
+            2px 2px at 40% 65%,
+            #ffffff 80%,
+            transparent
+        ),
+        radial-gradient(
+            2px 2px at 85% 75%,
+            #70bce5 80%,
+            transparent
+        ),
+        radial-gradient(
+            2px 2px at 25% 85%,
+            #ffb6d0 80%,
+            transparent
+        );
+
+    background-size: 240px 240px;
+
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+/* 💞 Floating Hearts */
+
+.floating-hearts {
+    z-index: 3;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -40px;
+
+    color: #f278a8;
+    opacity: 0;
+
+    filter: drop-shadow(0 0 5px #ffffffaa);
+
+    animation: heartRise 7s linear forwards;
+}
+
+/* =====================================
+   ✨ ANIMATIONS
+===================================== */
+
+@keyframes sceneAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes letterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes heartRise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    15% {
+        opacity: 0.85;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-110vh) rotate(35deg);
+    }
+}
+
+/* =====================================
+   📱 MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .site-header {
+        margin: 20px auto 25px;
+    }
+
+    .scene {
+        min-height: 400px;
+    }
+
+    .paper,
+    .wish-sky {
+        padding: 32px 20px;
+    }
+
+    .description,
+    .message {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .letter {
+        padding: 18px;
+    }
+
+    .primary,
+    .gold {
+        max-width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* ♡ Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers of Love ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="floating-hearts" id="hearts"></div>
+
+    <header class="site-header">
+        Apology and love <span>Card</span>
+    </header>
+
+    <main>
+        <!-- SCENE 1: THE FIRST SPARK -->
+        <section class="scene active" id="scene1">
+            <div class="paper">
+                <p class="chapter">Chapter One</p>
+                <h1>The First <em>Spark</em></h1>
+                <div class="big-icon">💌</div>
+                <p class="description">
+                    A little letter, carrying feelings
+                    that words sometimes cannot explain.
+                </p>
+                <button class="primary" onclick="openLetter()">
+                    Open My Letter ♡
+                </button>
+
+                <div id="letter" class="hidden letter">
+                    <h2>Hey, you! 💗</h2>
+                    <p>
+                        If you're reading this, it means I have
+                        something special to tell you.
+                        Bacha ye Code maine Ai se kihwaaya h too naraj mat hona 
+                        because mujhe abhi utni coding nhi aati but mai apke liye website bnana chahti thi.
+                        But Isme jo bhi feelings likhi h h maine khud se likhi h bacha . Bss ek smile ke sath ye padh lo bacha.
+                        I am sorry Bacha and i love you.
+                    </p><br>
+                    <button class="primary" onclick="nextScene(2)">
+                        Turn the Page →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 2: THE APOLOGY -->
+        <section class="scene" id="scene2">
+            <div class="paper">
+                <p class="chapter">A little honesty</p>
+                <h1>I'm <em>Sorry</em></h1>
+                <div class="big-icon">🩷</div>
+                <p class="message">
+                    I am truly sorry for what happened.Sorry for every mistakes i have done. Beta mujhe meri har galti ke liye maaf kar do aage se koshis karungi ki esi galtiyaan kabhii na ho. Apse bss ek request hai ki mujhe humesha meri galtiyo pe daant dena but kabhi mujhe chhor ke mat jana.
+                </p>
+                <button class="primary" onclick="nextScene(3)">
+                    There's More to Say →
+                </button>
+            </div>
+        </section>
+
+        <!-- SCENE 3: SKY OF WISHES -->
+        <section class="scene" id="scene3">
+            <div class="wish-sky">
+                <p class="chapter">A wish from my heart</p>
+                <h1>Sky of <em>Wishes</em></h1>
+                <div class="big-icon">🌙</div>
+                <p class="message">
+                    Mai bss itna chahti hu ki aap zindagi 
+                    bhar mere sath raho mujhe kbhi chhor ke na jao
+                    iske alawa aur koi expectations nhi h bacha.
+                    Mai Humesha Apke sath rahungi bacha Apko kabhi chhor ke nhi jaungi.
+                </p>
+                <button class="gold" onclick="nextScene(4)">
+                    Make a Little Wish ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- SCENE 4: THE HEART LOCK -->
+        <section class="scene" id="scene4">
+            <div class="paper">
+                <p class="chapter">Something I've kept safe</p>
+                <h1>The Heart <em>Lock</em></h1>
+                <button class="lock" id="lock" onclick="unlockHeart()"
+                    aria-label="Unlock the hidden message">
+                    🔒
+                </button>
+                <p class="description" id="lockHint">
+                    There's a little message waiting for you.
+                </p>
+                <div id="secret" class="hidden letter">
+                    <h2>Mera Bacha♡</h2>
+                    <p>
+                        Thankyou For everything Apne mujhe jitna jyda pyaar diya hai
+                        mai utna pyaar deserve nhi karti but fir bhi apne mujhe bahut sara pyaar diya bacha iske liye I love you bahut saara.
+                    </p>
+                    <p>You deserve All love, care, and respect. 🌷</p>
+                    <button class="primary" onclick="nextScene(5)">
+                        One Last Page →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 5: THE FINAL LETTER -->
+        <section class="scene" id="scene5">
+            <div class="paper final-paper">
+                <p class="chapter">Until the next page</p>
+                <h1>Forever <em>& Always</em></h1>
+                <div class="big-icon beating-heart">❤️</div>
+                <h2>Two Hearts, One Story</h2>
+                <p class="message">
+                    No website can say everything I feel,
+                    but I hope this little gift shows that
+                    I care. I'm sorry for every mistakes bacha,
+                     Bacha meri ek baat maan lo bss 
+                    Aap humesha khush raha karo ,Tension mat liya karo bacha
+                    Aap khush hi ache lagte ho mujhe. Always Smile Bacha
+                    Maine ye code AI se likhwaya hai because mujhe utni coding nhi aati par jab mujhe ache se coding aa jayengi to issse bhi achi website bnaungi bacha apke liye.
+                </p>
+                <p class="signature">I love you more than you will ever know  ♡</p>
+                <button class="primary" onclick="restartStory()">
+                    Read My Letter Again ↺
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>Some feelings deserve their own little universe ✨</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
